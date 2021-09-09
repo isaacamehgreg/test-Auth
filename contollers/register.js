@@ -1,12 +1,11 @@
-const { builtinModules, Module } = require('module');
 const mongoose =  require('mongoose');
 const path = require('path');
-const user = require(path.join(__dirname, 'models/auth/users'))
+const usermodel = require('../models/users');
 
 //build a function that adds a user to the mongo database
-const addUser = async (username, password) =>{
+function register (username, password){
 
- const newuser = new user;
+ const newuser = usermodel;
  newuser.username = username;
  newuser.password = password;
  newuser.save();
@@ -15,4 +14,5 @@ const addUser = async (username, password) =>{
  return
 
 }
-Module.exports = addUser;
+
+module.exports = register;

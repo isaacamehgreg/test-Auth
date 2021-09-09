@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const userModel = new Schema({
   username: String,
   password: String,
-  date: {default: Date.now}
+  date: Date
 });
 
 module.exports = userModel;
