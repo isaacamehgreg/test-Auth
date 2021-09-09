@@ -3,9 +3,12 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const bodyparser = require('body-parser')
 const mongoose = require('mongoose');
+async()=>{
 await mongoose.connect('mongodb://localhost/Test-Auth');
-
+console.log('db connected')
+}
 
 
 const indexRouter = require('./routes/index');

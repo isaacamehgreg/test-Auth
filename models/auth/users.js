@@ -8,4 +8,4 @@ const userModel = new Schema({
   date: {default: Date.now}
 });
 
-module.exports = UserModel;
+module.exports = userModel;
