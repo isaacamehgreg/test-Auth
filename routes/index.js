@@ -18,6 +18,7 @@ router.get('/register', function(req, res, next) {
 
 router.post('/register', function(req, res, next) {
   console.log(req.body);
+  
   register(req.body.username, req.body.password);
   console.log('yup');
  // res.render('auth/register', { title: 'Express' });
