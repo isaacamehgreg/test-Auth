@@ -5,9 +5,11 @@ const usermodel = require('../models/users');
 //build a function that adds a user to the mongo database
 function register (username, password){
 
- const newuser = usermodel;
- newuser.username = username;
- newuser.password = password;
+ const newuser = new usermodel({
+    username: username,
+    password: password
+
+ })
  newuser.save();
 
  console.log('user added');
