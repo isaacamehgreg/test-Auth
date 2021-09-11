@@ -14,11 +14,12 @@ router.get('/login', function(req, res, next) {
 });
 router.get('/register', function(req, res, next) {
   res.render('auth/register', { title: 'Express' });
+
 });
 
 router.post('/register', function(req, res, next) {
   console.log(req.body);
-  
+  req.checkBody('username','username should not be empty').notEmpty();
   register(req.body.username, req.body.password);
   console.log('yup');
  // res.render('auth/register', { title: 'Express' });
