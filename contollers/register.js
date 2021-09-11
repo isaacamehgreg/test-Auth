@@ -6,7 +6,7 @@ const usermodel = require('../models/users');
 function register (username, password){
 
  const newuser = new usermodel({
-     
+
     username: username,
     password: password
 
